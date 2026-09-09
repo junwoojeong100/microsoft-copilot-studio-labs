@@ -4,7 +4,7 @@
 
 Build a Copilot Studio agent, configure its knowledge and tools, and confirm its behavior using the same assets. This repository contains two self-contained HTML guides and four recorded walkthroughs, separated into **Create** and **Use**.
 
-**English is the default documentation language.** The Korean editions are also included. Both editions link to the same original recordings.
+**English is the default documentation language.** Korean editions are also included.
 
 📖 **Read the guides online — no download required:** <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/>
 
@@ -15,9 +15,9 @@ Build a Copilot Studio agent, configure its knowledge and tools, and confirm its
 | Beginner | Business users and first-time makers: a synthetic HR FAQ agent, grounded answers, leave-request input validation, and personal Teams use | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html) |
 | Azure developer | Developers: REST APIs, Foundry models, MCP, Foundry IQ retrieval, and approval workflows with explicit authentication and execution evidence | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html) |
 
-The beginner core path is **L01 → L02 → L03 → L09**. The developer core path is **L04 → L05 → L12 → L14 → L20**; **L08 Foundry Agent** is an additional optional/preview lab included in the developer recordings.
+The beginner core path is **L01 → L02 → L03 → L09**. For the developer guide, complete **Lab 0: base-agent preparation** before the five core labs **L04 → L05 → L12 → L14 → L20**. Lab 0 is a preparatory step, not an additional core completion item. **L08 Foundry Agent** is an additional optional/preview lab included in the developer recordings.
 
-The developer guide assumes familiarity with the beginner concepts but includes its own minimal agent setup. Completing the beginner guide does not imply completion of the developer guide. A comparison table near the beginning of each guide explains the difference.
+The developer guide assumes familiarity with the beginner concepts but includes its own minimal agent setup. Completing the beginner guide does not imply completion of the developer guide. A detailed comparison is available in each guide's reference appendix.
 
 ## Recorded walkthroughs
 
@@ -26,7 +26,7 @@ The developer guide assumes familiarity with the beginner concepts but includes 
 | Beginner | [4 min 33 sec](copilot-studio-hands-on-lab-create-20260909.mp4) | [3 min 21 sec](copilot-studio-hands-on-lab-use-20260909.mp4) |
 | Azure developer | [10 min 28 sec](copilot-studio-lab-for-azure-devs-create-20260909.mp4) | [9 min 21 sec](copilot-studio-lab-for-azure-devs-use-20260909.mp4) |
 
-These are the **original recordings with Korean captions, lab prompts, and responses**. They have not been translated, dubbed, or replaced for the English guides. The videos are edited from actual screen recordings: waiting periods and unsuccessful interaction windows are shortened or omitted, and some real frames are held for readability. They are not uninterrupted one-take recordings.
+Both language editions use the same **Korean-captioned videos with Korean lab prompts and responses**. These are edited walkthroughs using fictional data.
 
 The HTML guides include chapter timestamps. Video duration is not the time required to perform the labs; approval, provisioning, indexing, and publication delays are separate.
 
@@ -34,10 +34,7 @@ The HTML guides include chapter timestamps. Video duration is not the time requi
 
 No build or package installation is required for the documentation.
 
-**Online — GitHub Pages.** Open a published guide directly, with the videos streamed from the same site:
-
-- Beginner: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html>
-- Developer: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html>
+**Online — GitHub Pages.** Use the links in [Choose a guide](#choose-a-guide). Videos are served from the same site.
 
 **Offline — local copy.**
 
@@ -60,7 +57,7 @@ GitHub's file viewer displays HTML source rather than the interactive guide, so 
 
 ## Language and reproducibility
 
-English guide explanations, navigation, tables, and accessibility text are translated. Executable snippets, identifiers, and recorded Korean input/status values are retained where necessary to preserve the lab contracts and match the recordings. The surrounding English explanations describe how to use these samples.
+Copy executable snippets, identifiers, and Korean input/status values exactly as shown. English explanations beside the samples describe their meaning; do not substitute the translations for literal inputs. Replace placeholders such as `<LAB_PREFIX>` using the naming rules in each guide's prerequisites.
 
 The **English / 한국어** switch in each guide opens the corresponding language edition. Progress checkboxes are a local convenience, not evidence that a cloud operation succeeded.
 
@@ -69,7 +66,7 @@ The **English / 한국어** switch in each guide opens the corresponding languag
 - Use an approved non-production Sandbox, the appropriate maker permissions, and the required product licenses or credits. Signing in alone does not establish those rights.
 - Azure-dependent labs require approved external resources, connections, Microsoft Entra authentication, and least-privilege RBAC. These are not provisioned merely by opening the HTML.
 - Use only synthetic data and the approved self-test recipient/approver. Do not submit real HR requests, make payments, or send test approvals to other people.
-- Environment-specific resource names and IDs are examples from the recorded lab. Adapt them to your own approved environment. **Review cleanup commands before running them: they can delete resources.**
+- Environment-specific resource names and IDs are examples. Adapt them to your own approved environment. **Confirm ownership and dependencies before deleting lab resources.**
 - Never commit API keys, tokens, credentials, or personal data. Stop lab workflows and clear pending test approvals when finished; shared resources must not be deleted indiscriminately.
 
 ## Important integration boundaries
