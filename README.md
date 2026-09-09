@@ -6,12 +6,14 @@ Build a Copilot Studio agent, configure its knowledge and tools, and confirm its
 
 **English is the default documentation language.** The Korean editions are also included. Both editions link to the same original recordings.
 
+📖 **Read the guides online — no download required:** <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/>
+
 ## Choose a guide
 
 | Guide | Intended audience and outcome | English | 한국어 |
 |---|---|---|---|
-| Beginner | Business users and first-time makers: a synthetic HR FAQ agent, grounded answers, leave-request input validation, and personal Teams use | [Open guide](copilot-studio-hands-on-lab.html) | [가이드 열기](copilot-studio-hands-on-lab.ko.html) |
-| Azure developer | Developers: REST APIs, Foundry models, MCP, Foundry IQ retrieval, and approval workflows with explicit authentication and execution evidence | [Open guide](copilot-studio-lab-for-azure-devs.html) | [가이드 열기](copilot-studio-lab-for-azure-devs.ko.html) |
+| Beginner | Business users and first-time makers: a synthetic HR FAQ agent, grounded answers, leave-request input validation, and personal Teams use | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html) |
+| Azure developer | Developers: REST APIs, Foundry models, MCP, Foundry IQ retrieval, and approval workflows with explicit authentication and execution evidence | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html) |
 
 The beginner core path is **L01 → L02 → L03 → L09**. The developer core path is **L04 → L05 → L12 → L14 → L20**; **L08 Foundry Agent** is an additional optional/preview lab included in the developer recordings.
 
@@ -32,6 +34,13 @@ The HTML guides include chapter timestamps. Video duration is not the time requi
 
 No build or package installation is required for the documentation.
 
+**Online — GitHub Pages.** Open a published guide directly, with the videos streamed from the same site:
+
+- Beginner: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html>
+- Developer: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html>
+
+**Offline — local copy.**
+
 1. Download or clone the repository.
 2. Open either HTML guide in a modern browser, keeping the MP4 files in the same directory.
 3. Follow **Create** first, retain the generated assets, and then follow **Use** with the same saved configuration.
@@ -47,7 +56,7 @@ Then open:
 - Beginner: <http://127.0.0.1:8000/copilot-studio-hands-on-lab.html>
 - Developer: <http://127.0.0.1:8000/copilot-studio-lab-for-azure-devs.html>
 
-GitHub's file viewer displays HTML source rather than the interactive guide. To host the guides, use a static host such as GitHub Pages and open the individual HTML URLs. Preserve the relative filenames so language switches and video links continue to work.
+GitHub's file viewer displays HTML source rather than the interactive guide, so use the GitHub Pages links above. If you fork or re-host the repository, preserve the relative filenames so language switches and video links continue to work.
 
 ## Language and reproducibility
 

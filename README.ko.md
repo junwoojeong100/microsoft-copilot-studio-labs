@@ -6,12 +6,14 @@ Copilot Studio 에이전트를 만들고 지식·도구를 연결한 뒤, 같은
 
 **기본 문서 언어는 영어**이며 한국어 가이드도 함께 제공합니다. 두 언어 가이드에서 연결하는 영상은 동일합니다.
 
+📖 **내려받지 않고 바로 읽기:** <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/>
+
 ## 가이드 선택
 
 | 가이드 | 대상과 목표 | English | 한국어 |
 |---|---|---|---|
-| 입문자 | 업무 담당자·처음 사용하는 제작자: 가상 HR FAQ, 근거 기반 답변, 휴가 입력 검증, 본인 Teams 사용 | [Open guide](copilot-studio-hands-on-lab.html) | [가이드 열기](copilot-studio-hands-on-lab.ko.html) |
-| Azure 개발자 | 개발자: REST API, Foundry 모델, MCP, Foundry IQ 검색, 승인 워크플로의 인증·실행 계약 확인 | [Open guide](copilot-studio-lab-for-azure-devs.html) | [가이드 열기](copilot-studio-lab-for-azure-devs.ko.html) |
+| 입문자 | 업무 담당자·처음 사용하는 제작자: 가상 HR FAQ, 근거 기반 답변, 휴가 입력 검증, 본인 Teams 사용 | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html) |
+| Azure 개발자 | 개발자: REST API, Foundry 모델, MCP, Foundry IQ 검색, 승인 워크플로의 인증·실행 계약 확인 | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html) |
 
 입문 핵심 경로는 **L01 → L02 → L03 → L09**입니다. 개발자 핵심 경로는 **L04 → L05 → L12 → L14 → L20**이며, 개발자 영상에는 **선택/Preview L08 Foundry Agent**도 포함합니다.
 
@@ -32,6 +34,13 @@ HTML 가이드에는 구간별 타임스탬프가 있습니다. 영상 길이와
 
 문서를 사용하기 위한 빌드나 패키지 설치는 필요하지 않습니다.
 
+**온라인 — GitHub Pages.** 게시된 가이드를 바로 열 수 있으며 영상도 같은 사이트에서 재생됩니다.
+
+- 입문 한국어판: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html>
+- 개발자 한국어판: <https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html>
+
+**오프라인 — 로컬 사본.**
+
 1. 저장소를 다운로드하거나 clone합니다.
 2. MP4 파일을 같은 디렉터리에 둔 채 HTML 가이드를 브라우저로 엽니다.
 3. **Create**부터 수행하고 생성한 자산을 보존한 뒤, 동일한 저장본으로 **Use**를 진행합니다.
@@ -47,7 +56,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 - 입문 한국어판: <http://127.0.0.1:8000/copilot-studio-hands-on-lab.ko.html>
 - 개발자 한국어판: <http://127.0.0.1:8000/copilot-studio-lab-for-azure-devs.ko.html>
 
-GitHub 파일 뷰어에서는 HTML 소스가 표시됩니다. 웹으로 제공하려면 GitHub Pages 등의 정적 호스팅을 설정한 뒤 각 HTML 주소로 접속합니다. 언어 전환과 영상 링크가 유지되도록 상대 파일명을 보존하세요.
+GitHub 파일 뷰어에서는 HTML 소스가 표시되므로 위의 GitHub Pages 주소를 사용하세요. 저장소를 fork하거나 다른 곳에 다시 게시할 때는 언어 전환과 영상 링크가 유지되도록 상대 파일명을 보존하세요.
 
 ## 언어와 재현성
 
