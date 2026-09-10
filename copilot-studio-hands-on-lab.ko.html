@@ -457,7 +457,7 @@ Azure 자산·Work IQ·외부 모델은 입문 경로의 전제가 아닙니다.
     <p class="tiny"><b>상태 경고는 상세로 확인합니다.</b> Warning 개수만 보고 평가 미실행 경고라고 추정하지 않습니다. Review를 읽을 수 없거나 초기 설정이 끝났는지 불명확하면 원인 미확인으로 남깁니다.</p>
 
     <ol class="steps">
-      <li>Copilot Studio <span class="path">홈 / Home</span>에서 <b>New experience</b> 토글을 끄거나 <b>Other ways to build</b>를 열어 <b>Standard</b> 에이전트 만들기로 진입합니다.<div class="step-context">기존 Standard 화면이라면 <span class="path">에이전트 → 새 에이전트</span>를 사용합니다.</div></li>
+      <li>Copilot Studio <span class="path">Home → Other ways to build</span>에서 <b>Standard</b> 표시가 있는 <b>Agent</b> 카드를 선택합니다. <span class="path">Agents → More create options → Agent, Standard</span>로도 진입할 수 있습니다.<div class="step-context">New experience를 끌 필요는 없습니다. 기존 Standard 화면이라면 <span class="path">에이전트 → 새 에이전트</span>를 사용합니다.</div></li>
       <li>만들기 대상이 <b>Standard 하네스</b>인지 확인합니다.<div class="step-context"><span class="path">Name your agent</span> 창이 표시되어도 설명 입력창을 찾느라 다른 하네스로 이동하지 않습니다.
         <div class="note warn"><span class="ic">⚠️</span><div><b>환경 선택·하네스 선택·오케스트레이션 설정은 별개입니다.</b> “새 환경/기존 환경”으로 하네스를 판단하지 마세요. Standard 안에서 생성형 또는 클래식 오케스트레이션을 고를 수 있으며, 하네스 자체는 생성 후 변경할 수 없습니다.</div></div>
       </div></li>
@@ -478,6 +478,7 @@ Azure 자산·Work IQ·외부 모델은 입문 경로의 전제가 아닙니다.
       <li><b>초기 설정이 끝나고 시스템 토픽이 준비됐는지 확인한 뒤</b> 지시문·설정을 수정합니다.</li><li><span class="path">Details → Agent status → Review</span>에 <b>평가 미실행 경고</b>만 있다면 초기 제작을 진행할 수 있습니다.
         <div class="note warn"><span class="ic">⚠️</span><div><b>Ready라는 글자가 반드시 나와야 하는 것은 아닙니다.</b> 반대로 기본 인사·Connected 표시만으로 준비 완료를 판단하지도 마세요. <b>Setting up...</b> 상태나 “설정이 끝나야 사용할 수 있음” 안내가 남으면 기다리고, 계속 진행되지 않으면 같은 자산을 반복 생성하지 말고 관리자에게 확인합니다.</div></div>
       </li>
+      <li><span class="path">Overview → Edit Details</span>에서 <b>Description</b>도 확인합니다. 이름형 만들기에서 설명이 비어 있다면 가상 휴가 규정 안내·신청 정보 수집과 요약, 실제 제출·발송 없음이라는 범위를 짧게 입력하고 <b>Save</b>합니다. 설명은 아래 지시문과 별도 필드입니다.</li>
       <li><b>지시문을 다듬습니다.</b> 개요 페이지의 <span class="path">지시문</span> 영역을 열고 아래 내용으로 교체한 뒤 저장합니다.
         <div class="snip" data-testid="snippet-lab01-2">
           <div class="snip-h"><span>지시문 (Instructions)</span><button class="cpy" aria-controls="snippet-lab01-2-code" aria-label="L01 · 지시문 (Instructions) 복사" data-action="copy" data-copy-label="L01 · 지시문 (Instructions)" data-copy-state="idle" type="button">복사</button></div>
@@ -623,7 +624,9 @@ Azure 자산·Work IQ·외부 모델은 입문 경로의 전제가 아닙니다.
     <p><code>&lt;LAB_PREFIX&gt;-hr</code>로 돌아옵니다. 이번 Create의 새 가상 파일을 직접 올리는 기본 경로입니다. 채팅 첨부가 아니라 agent의 Knowledge에 추가합니다.</p>
     <ol class="steps">
       <li><span class="path">+ 지식 추가</span> 창의 <b>파일 끌어놓기 또는 찾아보기</b>로 사전 준비의 <code>&lt;LAB_PREFIX&gt;-LeavePolicy.txt</code>를 올립니다.</li>
-      <li>이름과 설명을 입력하고 <b>에이전트에 추가(Add to agent)</b>를 선택합니다.</li><li>처리 상태가 <b>준비됨(Ready)</b>인지 확인하고 새 지식 ID·파일명·내용 해시를 인계합니다. Upload 완료나 In progress를 Ready로 처리하지 않습니다. Use의 새 세션에서 근거 답변과 거부 응답을 각각 검증합니다.</li>
+      <li>파일명을 확인하고 <b>에이전트에 추가(Add to agent)</b>를 선택합니다. 업로드 창에 이름·설명 필드가 표시되는 UI에서는 이때 입력할 수 있습니다.</li>
+      <li>추가된 파일 행의 <span class="path">More → Edit</span>에서 <b>Name</b>과 <b>Description</b>을 확인합니다. 이름은 원래 파일명으로 유지하고, 설명에는 가상 문서의 범위와 사용할 질문을 입력한 뒤 <b>Save knowledge changes</b>를 누릅니다. 업로드 창에 설명 필드가 없었다면 이 단계에서 입력합니다.</li>
+      <li>처리 상태가 <b>준비됨(Ready)</b>인지 확인하고 새 지식 ID·파일명·내용 해시를 인계합니다. Upload 완료나 In progress를 Ready로 처리하지 않습니다. Use의 새 세션에서 근거 답변과 거부 응답을 각각 검증합니다.</li>
     </ol>
     <div class="note danger"><span class="ic">⛔</span><div><b>파일 업로드는 SharePoint 권한 검사의 대체 수단이 아닙니다.</b> 업로드한 사본에는 원본의 사용자별 접근 권한이 그대로 적용되지 않습니다. 이 랩은 가상 문서만 사용하고, 실제 민감 문서는 인증과 원본 권한을 유지하는 연결을 사용하세요.</div></div>
     <div class="note warn"><span class="ic">⚠️</span><div>환경의 <b>Dataverse 검색·인덱싱 설정</b>이 에이전트 지식을 지원하지 않는 모드면, <b>Dataverse · Dynamics 365 · 업로드 파일</b> 지식이 아예 추가되지 않고 관리자 조치 배너가 뜹니다. 제작자가 직접 바꿀 수 없으니 관리자에게 요청해야 합니다.</div></div>
@@ -1259,8 +1262,9 @@ APIM A2A URL을 native connector에 넣지 않습니다. Activity HTTP reverse p
         <div class="note warn"><span class="ic">⚠️</span><div>게시 전 <b>이름 · 설명 · 지시문</b>이 모두 채워져 있어야 합니다. 하나라도 비면 사전 검사에서 막힙니다. 또한 조직의 <b>DLP 데이터 정책</b>에 위배되는 커넥터 조합이 있으면 게시가 차단됩니다.</div></div>
       </li>
       <li>게시가 끝나면 <span class="path">채널</span> 탭으로 이동합니다.</li>
-      <li><b>Teams + Microsoft 365 Copilot</b> 채널을 선택합니다.</li><li>입문 core는 <b>Make agent available in Microsoft 365 Copilot을 Off</b>로 두고 <span class="path">Add channel</span>을 누릅니다. Microsoft 인증은 유지하며 본인 Teams 개인 앱만 설치합니다.</li>
-      <li><span class="path">See agent in Teams</span> → <span class="path">Add</span>로 본인 계정에 설치합니다.</li><li>이번 새 agent의 개인 채팅을 열고 앱 ID·agent ID·게시 시각을 인계합니다. Use에서 동일 개인 채팅의 실제 응답과 파일 citation을 확인합니다. 다른 기존 agent 대화로 대체하지 않습니다.</li>
+      <li><b>Microsoft 365 and Microsoft Teams</b> 채널을 선택합니다. UI에 따라 <b>Teams + Microsoft 365 Copilot</b>로 표시됩니다.</li><li>입문 core는 <b>Make agent available in Microsoft 365 Copilot을 Off</b>로 두고 <span class="path">Add channel</span>을 누릅니다. Microsoft 인증은 유지하며 본인 Teams 개인 앱만 설치합니다.</li>
+      <li><span class="path">See agent in Teams</span>로 이동해 새 에이전트 이름을 확인한 뒤 <span class="path">Add</span>로 본인 계정에 설치합니다. 브라우저에서 진행할 경우 실행 화면에 표시되는 <b>Use the web app instead</b>를 선택합니다.</li>
+      <li><b>Added successfully!</b> 화면이 표시되면 <b>Open</b>을 눌러 이번 새 에이전트의 개인 채팅을 엽니다. 채팅 이름을 다시 확인하고 앱 ID·agent ID·게시 시각을 인계합니다. Use에서 동일 개인 채팅의 실제 응답과 파일 citation을 확인합니다. 다른 기존 agent 대화로 대체하지 않습니다.</li>
 </ol><details class="deep" id="lab09-extra-channels"><summary id="lab09-extra-channels-summary" aria-controls="lab09-extra-channels-content" aria-expanded="false">참조 · 동료/조직 배포·M365 추가 채널·웹</summary><div class="d" id="lab09-extra-channels-content"><p>기본 Create/Use 영상에서는 실행하지 않습니다. 추가 M365 Copilot 제공·동료 공유·다른 웹 채널은 별도 승인과 별도 자산으로 검증합니다.</p><ol class="steps">      <li>먼저 에이전트의 <b>공유(Share)</b>에서 동료·보안 그룹에 <b>사용 권한</b>을 부여합니다.<div class="step-context">SharePoint 원본 읽기 권한도 별도로 필요합니다.</div><div class="step-context">이후 <span class="path">가용성 옵션</span>에서 배포 방식을 고릅니다.
         <div class="tw" tabindex="0" role="region" aria-labelledby="table-lab09-4-caption"><table><caption class="sr-only" id="table-lab09-4-caption">L09 · 왜 하나요?</caption>
           <thead><tr><th scope="col">배포 방식</th><th scope="col">설명</th><th scope="col">승인 필요</th></tr></thead>
@@ -1658,18 +1662,20 @@ Contoso의 가상 경비 규정 실습 에이전트입니다. 검토 권고를 �
     </div>
     <div class="goal"><b>목표(Goal)</b> — Microsoft Foundry에서 만든 지식 베이스를 Copilot Studio 에이전트가 검색 원본으로 사용합니다.</div>
     <div class="perm"><span class="pk">🔑 필요 권한</span>
-      <dl><dt>👤 제작자</dt><dd>환경의 <code>Environment Maker</code> 역할 + 제작 이용 권한·GHC 크레딧</dd><dt>☁️ Azure</dt><dd><span class="alert">Foundry IQ 지식 베이스 접근 권한을 Azure에서 부여받아야 합니다.</span> 인증 방식별 정보가 별도로 필요합니다: <b>API 키</b> / <b>클라이언트 인증서</b> / <b>서비스 주체</b> / <b>Entra ID 통합</b>(Search에 대한 RBAC 필요). 공유 키·서비스 주체가 원본의 사용자별 권한을 자동으로 승계한다고 가정하지 않습니다.</dd><dt>⚠️ 튜닝</dt><dd>검색 품질은 Azure의 지식 베이스 소유자와 함께 조정합니다.</dd></dl>
+      <dl><dt>👤 제작자</dt><dd>환경의 <code>Environment Maker</code> 역할 + 제작 이용 권한·GHC 크레딧</dd><dt>☁️ Azure</dt><dd><span class="alert">승인된 APIM MCP·Entra 연결과 조회 대상 KB가 필요합니다.</span> 기본 경로의 client는 승인된 Entra 신원, Search 조회 신원은 APIM managed identity입니다. 관리자가 gateway의 caller 허용 범위와 backend의 최소 조회 역할을 준비하며, 입문자가 키를 발급하거나 권한을 넓히지 않습니다.</dd><dt>⚠️ 튜닝</dt><dd>검색 품질은 Azure의 지식 베이스 소유자와 함께 조정합니다.</dd></dl>
     </div>
   </div>
   <div class="lab-body"><p class="tiny"><b>선택 실습 · GHC.</b> 입문자는 Azure 인프라나 RBAC를 만들지 않고 관리자가 준비한 경로를 인계받습니다.</p>
 <p><b>이번 권장 구성:</b> IQ는 <b>APIM으로 정책을 적용하는 공식 KB MCP enterprise 경로</b>를 기본으로 사용합니다. Copilot Studio MCP의 승인된 client 인증 뒤, APIM managed identity가 Search를 조회합니다. Native Foundry IQ connector는 별도의 선택 비교 경로입니다.</p>
-<ol class="steps"><li><span class="path">Build → Tools</span>에서 승인된 APIM MCP 연결을 선택합니다. 이번 lab client는 보안 연결 저장소의 Entra OAuth/Maker 연결이며, gateway는 지정된 lab 사용자만 허용합니다. 키·토큰은 화면/파일에 기록하지 않습니다.</li>
-<li>지시문·연결·실행 신원을 저장하고 전체 재열기로 확인합니다. “해외 출장 현지 교통비 1회 한도와 필요한 증빙은 무엇인가요?”를 새 세션에서 질문합니다.</li>
-<li><code>knowledge_base_retrieve</code>의 Input/Output과 인용을 펼쳐 실제 <code>travel-001</code>, <code>50,000원 이내</code>, <code>영수증 필요</code>를 확인합니다. 저장·Connected·HTTP 200만으로 완료하지 않습니다.</li>
-<li>Native 비교는 <span class="path">Azure - Foundry IQ → Microsoft Entra ID Integrated</span>에서 KB/API Version을 지정하여 별도 시험합니다. 이번 native 경로는 실제 retrieval 미확인이며 APIM 경로 성공으로 대신 표시하지 않습니다.</li></ol>
+<ol class="steps"><li>L10의 생성 방법으로 검증 전용 <code>&lt;P&gt;-iq</code> GHC 에이전트를 새로 만듭니다. 기존 L11 경비 에이전트와 파일은 변경하지 않습니다. 새 에이전트의 기본 <b>Search all websites</b>를 제거하고 로컬 규정 파일을 추가하지 않습니다.</li>
+<li><span class="path">Build → Tools → Add tool</span>의 MCP 목록에서 승인된 APIM 커넥터의 정확한 이름을 검색합니다. 해당 gateway의 기존 Entra 연결을 선택해 <b>Add → Save</b>하고, 이 실습에 승인된 Maker 실행 모드를 확인합니다. 키·토큰은 화면/파일에 기록하지 않습니다.</li>
+<li>지시문에 <code>가상 규정 질문은 APIM MCP 서버 &lt;IQ_MCP_SERVER_NAME&gt;의 knowledge_base_retrieve로 조회합니다. 이것이 Foundry IQ KB의 조회 경로이며 별도 Azure - Foundry IQ 도구를 찾지 않습니다. 실제 반환 근거와 출처만 사용해 한국어로 답하고 실제 접수·승인·지급은 하지 않습니다.</code>를 입력합니다. 자리표시자는 실제 연결한 서버 표시명으로 바꿉니다.</li>
+<li>저장·전체 재열기로 지시문·연결·실행 모드와 <code>knowledge_base_retrieve</code> 도구 목록을 확인합니다. <span class="path">Preview → New chat</span>에서 <code>실습용 가상 규정의 해외 출장 현지 교통비 1회 한도와 필요한 증빙을 조회해 주세요. 실제 문서 ID와 출처를 포함해 3문장 이내로 답해 주세요.</code>를 요청합니다.</li>
+<li>실제 <code>knowledge_base_retrieve</code>의 입력·반환 본문·참조와 최종 답변을 대조합니다. 예시 KB의 <code>travel-001</code>, <code>1회당 50,000원 이내</code>, <code>영수증 필요</code>, <code>mcp://searchindex/travel-001</code>이 일치해야 합니다. 저장·Connected·HTTP 200이나 다른 지식의 답변만으로 완료하지 않습니다.</li>
+<li>Native 비교는 <span class="path">Azure - Foundry IQ → Microsoft Entra ID Integrated</span>에서 KB/API Version을 지정하는 별도 선택 경로입니다. 이를 선택했다면 실제 native retrieval까지 확인하고 APIM 경로 성공으로 대신 표시하지 않습니다.</li></ol>
 <p><b>실행 신원:</b> APIM → Search 호출의 backend 신원은 managed identity입니다. 사용자별 Search 권한이 자동 전파되는 것은 아닙니다. 공유·운영 게시와 다른 사용자의 ACL은 별도로 검증하세요.</p>
 <p><b>지원 상태:</b> Search API <code>2026-04-01</code>의 minimal retrieval과 개별 connector/게이트웨이 기능의 지원 상태는 별도입니다. 현재 Consumption의 HTTP passthrough 검증을 전용 MCP server 기능의 지원으로 확대하지 않습니다. 오류/근거 부재 시 중단하고 개발자에게 인계합니다.</p>
-<p><a href="copilot-studio-lab-for-azure-devs.ko.html#lab14">개발자판: MI·최소 검증 RBAC scope·지원 tier·native 비교</a> · <a href="copilot-studio-lab-for-azure-devs.ko.html#integration-iq">IQ 연결 사전 조건</a></p><div class="refs"><b>공식 근거 · 2026-09-09</b> <a href="https://learn.microsoft.com/en-us/azure/api-management/expose-existing-mcp-server" target="_blank" rel="noopener noreferrer">APIM existing MCP·지원 tier</a> · <a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank" rel="noopener noreferrer">APIM A2A·지원 tier</a> · <a href="https://learn.microsoft.com/en-us/azure/api-management/authentication-managed-identity-policy" target="_blank" rel="noopener noreferrer">Managed identity 정책</a> · <a href="https://learn.microsoft.com/en-us/azure/search/search-security-rbac" target="_blank" rel="noopener noreferrer">Search query RBAC</a> · <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/add-agent-foundry-agent" target="_blank" rel="noopener noreferrer">Native Foundry Agent·Activity</a></div></div></article>
+<p><a href="copilot-studio-lab-for-azure-devs.ko.html#lab14">개발자판: MI·RBAC 범위·지원 tier·native 비교</a> · <a href="copilot-studio-lab-for-azure-devs.ko.html#integration-iq">IQ 연결 사전 조건</a></p><div class="refs"><b>공식 근거 · 2026-09-09</b> <a href="https://learn.microsoft.com/en-us/azure/api-management/expose-existing-mcp-server" target="_blank" rel="noopener noreferrer">APIM existing MCP·지원 tier</a> · <a href="https://learn.microsoft.com/en-us/azure/api-management/agent-to-agent-api" target="_blank" rel="noopener noreferrer">APIM A2A·지원 tier</a> · <a href="https://learn.microsoft.com/en-us/azure/api-management/authentication-managed-identity-policy" target="_blank" rel="noopener noreferrer">Managed identity 정책</a> · <a href="https://learn.microsoft.com/en-us/azure/search/search-security-rbac" target="_blank" rel="noopener noreferrer">Search query RBAC</a> · <a href="https://learn.microsoft.com/en-us/microsoft-copilot-studio/agents-experience/foundry-iq-connect" target="_blank" rel="noopener noreferrer">Foundry IQ 연결</a></div></div></article>
 
 <article class="lab" id="lab15" data-tags="ghc" data-completion="eligible" data-part="B" data-lab-id="L15" aria-labelledby="lab15-title">
   <div class="lab-head">
@@ -2206,10 +2212,11 @@ Contoso의 가상 경비 규정 실습 에이전트입니다. 검토 권고를 �
     <h4>20-1. 이벤트 기반 승인 워크플로</h4>
     <ol class="steps">
       <li>실습용 SharePoint 목록 <code>&lt;LAB_PREFIX&gt;-Expenses</code>를 만듭니다.<div class="step-context">기본 <code>Title</code> 외에 <code>Amount</code>(숫자·필수), <code>Reason</code>(여러 줄 텍스트·필수), <code>Status</code>(한 줄 텍스트, 기본값 <code>접수</code>)를 추가합니다.</div></li><li>Amount의 열 유효성 검사 수식을 <code>=[Amount]&gt;0</code>, 오류 메시지를 <code>0보다 큰 금액을 입력하세요.</code>로 설정합니다.<div class="step-context">승인자·알림 수신자는 본인 실습 계정에 고정하며 실제 지급과 연결하지 않습니다.</div></li>
-      <li>왼쪽 메뉴에서 <span class="path">워크플로</span> → <span class="path">+ 새 워크플로</span>.</li>
-      <li>자연어로 원하는 자동화를 설명합니다. Copilot이 생성·구성·검증까지 도와줍니다.
+      <li><span class="path">Workflows → New workflow</span>에서 <code>&lt;P&gt;-expense-approval</code>을 만듭니다. 빈 캔버스가 열리면 시작 노드의 <span class="path">Trigger type → Connector → SharePoint → When an item is created</span>를 선택하고 승인된 본인 연결과 새 목록을 지정합니다.</li>
+      <li>아래 계약에 맞게 If/Else·SharePoint Update item·Standard Approvals·실패 End 노드를 구성합니다. 자연어 생성이 제공되는 UI에서는 다음 요청으로 초안을 만들 수 있지만 결과를 반드시 대조합니다.
         <div class="snip" data-testid="snippet-lab20-1"><div class="snip-h"><span>워크플로 생성 프롬프트</span><button class="cpy" aria-controls="snippet-lab20-1-code" aria-label="L20 · 워크플로 생성 프롬프트 복사" data-action="copy" data-copy-label="L20 · 워크플로 생성 프롬프트" data-copy-state="idle" type="button">복사</button></div>
 <pre id="snippet-lab20-1-code" tabindex="0" aria-label="L20 · 워크플로 생성 프롬프트">실습용 &lt;LAB_PREFIX&gt;-Expenses 목록에 새 항목이 생기면 실행하세요.
+Title이 "&lt;P&gt;-EXPENSE"이고 Status가 "접수"인 가상 실습 행만 처리합니다.
 Amount가 300000을 넘으면 고정된 실습 승인자에게 승인 요청을 보냅니다.
 승인되면 같은 항목의 Status를 "승인"으로, 반려되면 "반려"로 바꿉니다.
 응답이 없으면 "승인 대기"로 유지합니다. 오류·취소·timeout을 승인으로 처리하지 않습니다.
@@ -2218,8 +2225,8 @@ Amount가 300000을 넘으면 고정된 실습 승인자에게 승인 요청을 
 상태 갱신은 새 항목을 만들지 말고 트리거의 항목 ID를 사용하세요.
 실제 사내 승인 정책이나 지급 절차로 사용하지 않습니다.</pre></div>
       </li>
-      <li>트리거가 <b>SharePoint — When an item is created</b>인지, 조건이 <code>Amount &gt; 300000</code>인지 확인합니다.</li><li><code>Update item</code>은 동일 목록·트리거 ID에 연결합니다.<div class="step-context">항목 수정 이벤트로 다시 실행되는 루프를 만들지 마세요.</div></li>
-      <li>승인자는 본인으로 고정하고 요청 전에 같은 항목의 <code>Status = 승인 대기</code>를 기록합니다. 실제 outcome의 Approve는 승인, Reject는 반려로 분리하고, 미응답·미확인 결과는 승인 대기로 유지합니다.</li>
+      <li>트리거가 <b>SharePoint — When an item is created</b>인지 확인합니다. 먼저 <code>Title = &lt;P&gt;-EXPENSE</code>와 <code>Status = 접수</code>를 검사한 뒤 <code>Amount &gt; 300000</code>으로 분기합니다.</li><li><code>Update item</code>은 동일 목록·트리거 ID에 연결하고 필수 금액·사유는 원래 값을 유지합니다.<div class="step-context">항목 수정 이벤트로 다시 실행되는 루프를 만들지 마세요.</div></li>
+      <li>승인자는 본인으로 고정하고 지원되는 알림·재할당은 Off로 둡니다. 요청 전에 같은 항목의 <code>Status = 승인 대기</code>를 기록합니다. 실제 outcome의 Approve는 승인, Reject는 반려로 분리합니다. 실패·미확인 결과는 승인 대기를 유지하고 <code>LAB_APPROVAL_UNCONFIRMED</code>로 종료합니다. 결과 분기의 Run after는 승인 노드의 Succeeded·Failed·TimedOut만 포함하고 Skipped는 제외합니다.</li>
       <li><b>실제 Approval timeout은 선택 시험</b>입니다. 지원되는 timeout 설정과 실제 실행 trace로 확인할 때만 수행하며, 긴 만료 대기를 필수 완료 조건으로 두지 않습니다. <code>Canceled/Cancelled</code>는 취소이지 <code>expired</code> 성공이 아닙니다. 짧은 Delay나 deterministic error branch를 실제 timeout이 발생한 증거로 표현하지 않습니다.</li>
       <li>고급 노드를 살펴봅니다.
         <div class="tw" tabindex="0" role="region" aria-labelledby="table-lab20-17-caption"><table><caption class="sr-only" id="table-lab20-17-caption">L20 · 20-1. 이벤트 기반 승인 워크플로</caption>
@@ -2237,11 +2244,12 @@ Amount가 300000을 넘으면 고정된 실습 승인자에게 승인 요청을 
 
     <h4>20-2. 짧은 접수용 워크플로를 도구로 붙이기</h4>
     <ol class="steps">
-      <li>별도 워크플로 <code>&lt;LAB_PREFIX&gt;-expense-intake</code>를 만듭니다.<div class="step-context">트리거는 <b>When an agent calls the flow</b>, 입력은 <code>amount</code>(숫자)와 <code>reason</code>(텍스트)입니다.</div></li>
-      <li><b>Create item 앞의 조건</b>에서 amount가 유효한 양수이고 reason의 앞뒤 공백을 제거한 값이 비어 있지 않은지 검사합니다.<div class="step-context">실패 분기는 오류로 끝내고 행 생성·성공 응답을 실행하지 않습니다.</div></li><li>통과한 가상 검토 건만 <b>SharePoint — Create item</b>으로 <code>Title = LAB-EXPENSE</code>, <code>Amount = amount</code>, <code>Reason = reason</code>, <code>Status = 접수</code>를 저장합니다.</li>
-      <li><b>생성 성공 분기에서만 Respond to the agent</b>를 실행해 실제 항목 ID를 숫자 <code>requestId</code>로 반환합니다.<div class="step-context">입력 검증·저장 실패 시 성공 응답이나 임의 ID를 반환하지 않습니다.</div><div class="step-context"><b>Asynchronous response = Off</b>, <b>100초 이내 동기 응답</b>을 유지하며 사람의 최종 승인은 이 호출에서 기다리지 않습니다.</div></li>
-      <li>접수용 워크플로를 <b>게시</b>한 뒤 L10 에이전트의 <span class="path">Tools → 도구 추가 → 워크플로</span>에서 선택합니다.</li><li>설명에 <code>금액·사유를 확인한 사용자가 명시적으로 접수 요청할 때만 사용하며 지급·최종 승인은 하지 않습니다.</code>를 넣습니다.<div class="step-context">설명만으로 강제 승인 통제가 생기는 것은 아니므로 실제 승인 권한은 20-1에서 통제합니다.</div></li>
-      <li>입력의 금액·사유를 확인하고 <code>가상 경비 300001원, 사유는 승인 분기 테스트입니다. 접수해 주세요.</code>로 실행합니다. 반환 ID를 받은 뒤 20-1 워크플로의 승인 카드를 별도로 처리합니다.</li>
+      <li>별도 워크플로 <code>&lt;LAB_PREFIX&gt;-expense-intake</code>를 만듭니다. 트리거는 <b>When an agent calls the workflow</b>(일부 UI·내부 이름은 <b>When an agent calls the flow</b>), 입력은 <code>amount</code>(Number)와 <code>reason</code>(Text)입니다. 실제 키 <code>number</code>/<code>text</code>는 Code view에서 확인합니다.</li>
+      <li><b>Create item 앞의 조건</b>에서 amount가 유효한 양수이고 reason의 앞뒤 공백을 제거한 값이 비어 있지 않은지 검사합니다.<div class="step-context">실패는 <code>LAB_VALIDATION_ERROR</code>로 끝내고 행 생성·성공 응답은 실행하지 않습니다.</div></li><li>통과한 건만 <b>SharePoint — Create item</b>으로 <code>Title = &lt;P&gt;-EXPENSE</code>, <code>Amount = amount</code>, <code>Reason = reason</code>, <code>Status = 접수</code>를 저장합니다.</li>
+      <li>기본 생성된 분기 밖의 빈 Respond를 제거하고 <b>성공 분기의 Create item 바로 뒤</b>에 <b>Respond to the agent</b>를 둡니다. <b>Text</b> 출력 표시명 <code>requestId</code>를 만들고 생성된 ID의 동적 콘텐츠를 연결합니다. 기본 실제 키는 <code>text</code>이며 값은 숫자로만 이루어진 ID 문자열입니다.<div class="step-context">실패·Else에는 성공 응답이나 임의 ID를 두지 않습니다. <b>Asynchronous response = Off</b>와 <b>100초 이내 동기 응답</b>을 유지하며 사람 승인은 여기서 기다리지 않습니다.</div></li>
+      <li>접수용 워크플로의 <b>Published·On</b>을 확인한 뒤 L10 에이전트의 <span class="path">Tools → Add tool → Workflows</span>에서 정확한 새 이름을 선택합니다.</li>
+      <li>도구 설명과 에이전트 지시문에 <code>금액·사유·실습 전용 내용을 먼저 표시하고 별도 다음 턴에서 같은 내용을 확인한 뒤에만 접수합니다. 실제 반환 JSON의 text 값이 접수 ID(requestId)입니다. 키 이름 차이나 응답 지연만으로 다시 접수하지 않으며 기존 건부터 확인합니다. 실제 지급은 하지 않습니다.</code>를 반영합니다. 저장·전체 재열기 후 <b>New chat</b>으로 시험합니다. schema가 바뀌면 바인딩을 갱신하고 다시 엽니다.</li>
+      <li>첫 턴에 <code>가상 경비 300000원, 사유는 &lt;P&gt; CASE-A입니다. 실습 접수만 해 주세요. 규정 조회는 요청하지 않습니다.</code>를 요청합니다. 이 턴에 intake 호출이나 새 행이 없어야 합니다. 별도 다음 턴의 <code>확인했습니다. 방금 표시한 동일 내용으로 접수해 주세요. 결과는 실제 반환된 접수 ID만 한 줄로 답해 주세요.</code> 뒤에만 실제 ID를 받아 20-1의 같은 행 상태와 대조합니다.</li>
     </ol>
 
     <h4>검증(Verify) · 완료 기준</h4><div class="note check"><span class="ic">✅</span><div><b>필수 완료</b> — 동일 인계본에서 대화가 100초 이내 실제 <code>requestId</code>를 반환하고 해당 SharePoint 항목 ID와 일치해야 합니다. <b>300000원은 자동 승인</b>, 서로 다른 두 <b>300001원 건은 각각 본인 승인·반려</b>로 시험해 실제 outcome과 같은 항목의 최종 상태를 대조합니다. <b>0원·음수·사유 누락/공백은 입력 거부이며 새 행·성공 ID가 없어야 합니다.</b> 미응답은 승인 대기로 확인합니다. 실제 timeout 대기는 필수가 아니며 취소·결정론적 오류는 expired 성공이 아닙니다. 호출 timeout 후 재시도 전에는 기존 항목 생성 여부를 확인해 중복 접수를 피하세요.</div></div>
@@ -2428,7 +2436,7 @@ Amount가 300000을 넘으면 고정된 실습 승인자에게 승인 요청을 
 <tr><th scope="row"><a href="copilot-studio-lab-for-azure-devs-use-20260909.mp4#t=379.48">06:19–07:56</a></th><td>0·음수·사유 누락/공백: agent·UI·서버 guard 구분</td></tr>
 <tr><th scope="row"><a href="copilot-studio-lab-for-azure-devs-use-20260909.mp4#t=476.84">07:56–09:16</a></th><td>미응답 ID 4·대기 run/승인 취소·두 workflow Off</td></tr>
 </tbody></table></div>
-<p><b>L20 출력 확인:</b> 출력 표시명 <code>requestId</code>와 실제 반환 키 <code>number</code>는 다를 수 있습니다. <code>{"number":"1"}</code>처럼 숫자 문자열이 반환되면 실제 목록 ID와 대조하세요. <a href="#lab20">L20의 출력·승인·정리 절차</a>를 따릅니다.</p>
+<p><b>L20 출력 확인:</b> 기본 계약은 Text 출력 표시명 <code>requestId</code>, 실제 반환 키 <code>text</code>입니다. <code>{"text":"123"}</code>의 ID 문자열을 실제 목록 ID와 대조하고, 에이전트도 이 키를 접수 ID로 해석하도록 설정합니다. Number 선언만으로 실제 JSON이 숫자가 된다고 가정하거나 키 이름 차이 때문에 재접수하지 않습니다. <a href="#lab20">L20의 출력·승인·정리 절차</a>를 따릅니다.</p>
 
 
 
@@ -2943,7 +2951,7 @@ DLP는 이와 별도의 커넥터·조합 정책이며, Entra Agent ID 생성만
 </section>
 
 <section class="card" id="cleanup">
-  <h2 class="sec"><span class="num" aria-hidden="true">A3</span> 리소스 정리 — 비용이 계속 나가지 않게</h2><p><b>추가 권한 정리:</b> APIM MI의 Search Index Data Reader는 단일 Search service 범위로 부여했습니다. 실습 종료 후 해당 역할만 제거하고 공유 Search는 보존합니다. <a href="copilot-studio-lab-for-azure-devs.ko.html#lab-resource-cleanup">실습 자산 정리 범위</a></p>
+  <h2 class="sec"><span class="num" aria-hidden="true">A3</span> 리소스 정리 — 비용이 계속 나가지 않게</h2><p><b>추가 권한 정리:</b> 이번 실습에서 본인이 새로 부여한 역할만 소유자·종속성을 확인해 회수합니다. 기존 APIM MI의 Search Reader 역할을 재사용했다면 삭제하지 않으며 공유 Search도 보존합니다. <a href="copilot-studio-lab-for-azure-devs.ko.html#lab-resource-cleanup">실습 자산 정리 범위</a></p>
 <div class="note warn"><div><b>선택 Azure 자산:</b> 사용한 경우에만 실습 종료 후 소유자와 전용 자산·불필요한 역할·자격 증명을 정리합니다. 공유 Search/KB와 Foundry 계정은 보존하고, 계속 보존할 자산의 비용·정리일·자격 증명 만료를 확인하세요. <a href="copilot-studio-lab-for-azure-devs.ko.html#lab-resource-cleanup">실습 자산 정리 범위</a></div></div>
   <p><b>Create/Use 인계 자산의 정리는 전체 Use 후에만 수행합니다.</b> <a href="#lab14">L14</a>의 IQ 연결·KB와 <a href="#lab20">L20</a>의 intake·승인·목록을 구분해 기록합니다. 선택 랩을 실행하지 않았다면 해당 자산을 만들거나 정리할 필요가 없습니다.</p>
   <p class="tiny">L22의 다음 실습 자산은 해당 실습을 별도로 실행한 경우에만 소유자와 정리합니다. 이 가이드의 완료를 위해 새 정책·TEST 배포를 만들 필요는 없습니다.</p>
