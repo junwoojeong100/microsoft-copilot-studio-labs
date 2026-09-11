@@ -384,6 +384,26 @@ html{scroll-behavior:auto;scroll-padding-top:calc(var(--topbar-height,54px) + 16
 </section>
 
 <section class="card" id="prep"><h2 class="sec">15 minutes before starting · account, environment, and fictional document</h2>
+<div id="minimum-access">
+<h3 id="minimum-access-title">Before you start · minimum account and permissions</h3>
+<p class="tiny">Participant checklist for the approved lab environment. Confirm access before creating assets; signing in alone does not establish permission.</p>
+<div class="tw" tabindex="0" role="region" aria-labelledby="table-minimum-access-caption"><table><caption class="sr-only" id="table-minimum-access-caption">Beginner participant · minimum account and permissions</caption>
+<thead><tr><th scope="col">Scope</th><th scope="col">Participant must have</th><th scope="col">Where to check</th><th scope="col">If missing</th></tr></thead><tbody>
+<tr><th scope="row">All core labs · account</th><td>A work/school account in the lab tenant; an authentication method and MFA when required.</td><td>Account menu in Studio; compare the Teams account before L09.</td><td>Stop until the correct account can sign in.</td></tr>
+<tr><th scope="row">All core labs · entitlement</th><td>Administrator-confirmed Copilot Studio authoring entitlement.</td><td>License/entitlement assignment with the administrator.</td><td>Do not start L01.</td></tr>
+<tr><th scope="row">All core labs · environment</th><td>Access to the designated Dataverse Sandbox and its <code>Environment Maker</code> role for own lab assets.</td><td>Studio environment selector; role assignment with the administrator.</td><td>Stop; do not switch to Default or Production.</td></tr>
+<tr><th scope="row">L09 · Teams</th><td>Publishing entitlement, Teams access and permission to install the personal agent app.</td><td>Administrator's publishing approval and Teams app policy.</td><td>With only a trial, stop after L01–L03; do not mark L09 complete.</td></tr>
+</tbody></table></div>
+<p class="tiny"><b>Not blanket requirements:</b> Global Administrator, System Administrator and Azure Owner roles. The beginner core needs no Azure subscription, GitHub account/PAT, or SharePoint connector. Optional labs have separate prerequisites.</p>
+<p class="tiny"><a href="#auth-sites">Portal and account checks</a> · <a href="#perms">Detailed role table</a> · <a href="#acr">Entitlement and credit boundaries</a></p>
+<details class="deep" id="admin-preparation"><summary id="admin-preparation-summary" aria-expanded="false" aria-controls="admin-preparation-content">Administrator/organizer preparation · not participant roles</summary><div class="d" id="admin-preparation-content">
+<ul>
+<li>Provide the approved Dataverse Sandbox, assign authoring entitlement and the participant's scoped role, and confirm the uploaded-file knowledge/search prerequisites.</li>
+<li>Confirm applicable DLP rules, capacity/credit limits and the person responsible for stopping the lab. Do not relax organizational policies for the exercise.</li>
+<li>For L09, approve publishing and the participant's personal Teams app installation. Do not require organization-wide sharing or give participants administrator accounts.</li>
+<li>Only for separately selected Foundry/GHC labs, prepare the approved resources, connections and runtime permissions. For L05, reusing an authorized existing model connection does not require new deployment or key-viewing rights; new infrastructure, connection credentials and backend roles belong to separately approved setup work.</li>
+</ul></div></details>
+</div>
 <p id="lab-basics"><b>Essential terms:</b> The core labs use the <b>Standard</b> harness (agent runtime). <b>Topic</b> means a conversation flow and <b>Knowledge</b> means a source used to answer questions. The GitHub Copilot (GHC) harness is covered in optional labs. Harnesses cannot be converted into one another after creation. <a href="#terminology">Full glossary</a></p>
 
 
@@ -2782,7 +2802,7 @@ Do not use this as a real company approval policy or payment procedure.</pre></d
   <div class="tw" tabindex="0" role="region" aria-labelledby="table-perms-29-caption"><table><caption class="sr-only" id="table-perms-29-caption"> perms · ③ Azure and M365 permissions </caption>
     <thead><tr><th scope="col">Lab</th><th scope="col">Required permissions</th></tr></thead>
     <tbody>
-      <tr><td><b>L05</b> Foundry Model</td><td>Foundry project access +  <b>model-deployment/approved-key viewing permission</b>. Reusing an existing deployment does not require resource-creation permission; when creating, request only operation/scoped RBAC.</td></tr>
+      <tr><td><b>L05</b> Foundry Model</td><td><b>Existing connection:</b> access to the approved model deployment and permission to use its native APIM connection. Reuse alone does not require new deployment, resource-creation or key-viewing rights. <b>New setup:</b> the authorized administrator/resource owner separately obtains only the required provisioning, APIM API-scoped key and backend-role permissions. See <a href="#admin-preparation">administrator preparation</a>.</td></tr>
       <tr><td><b>L08</b> Foundry Agent</td><td>In the lab project,  <b>Foundry User</b>  or equivalent agent-settings editing permission + an Azure CLI/SDK execution environment. See L08's REST procedure for Activity enablement.</td></tr>
       <tr><td><b>L14</b> Foundry IQ</td><td>For the approved Connection identity,  <b>KB lookup/retrieval runtime permissions</b> and authentication information. Verify saved/reopened KB/API Version/Connection on the new GHC agent and actual new-session retrieval/returned evidence. A selector entry, direct Azure search, or HTTP 200 alone does not establish Studio runtime readiness.</td></tr>
       <tr><td><b>L20</b>  GHC expense workflow</td><td>Requires dedicated-list Create/Update permissions, workflow publish/activate permission, SharePoint/Approvals Connections, and fixed self-approver response permission. Distinguish agent-user and connection execution identities and check DLP compatibility. L04 Standard Agent flow/L07 event-trigger permission checks are not substitutes. Actual timeout testing is optional, not a reason to expand permissions.</td></tr>

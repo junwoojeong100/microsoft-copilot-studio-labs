@@ -384,6 +384,26 @@ html{scroll-behavior:auto;scroll-padding-top:calc(var(--topbar-height,54px) + 16
 </section>
 
 <section class="card" id="prep"><h2 class="sec">시작 전 15분 · 계정·환경·가상 문서</h2>
+<div id="minimum-access">
+<h3 id="minimum-access-title">실습 시작 전 · 최소 계정·권한 체크리스트</h3>
+<p class="tiny">승인된 실습 환경을 사용하는 참가자 기준입니다. 자산을 만들기 전에 확인하며, 로그인 성공만으로 권한이 준비된 것은 아닙니다.</p>
+<div class="tw" tabindex="0" role="region" aria-labelledby="table-minimum-access-caption"><table><caption class="sr-only" id="table-minimum-access-caption">입문 참가자 · 최소 계정·권한</caption>
+<thead><tr><th scope="col">적용 범위</th><th scope="col">참가자가 갖춰야 할 것</th><th scope="col">확인 위치</th><th scope="col">없으면</th></tr></thead><tbody>
+<tr><th scope="row">핵심 전체 · 계정</th><td>실습 테넌트의 회사/학교 계정, 로그인 수단과 정책상 필요한 MFA.</td><td>Studio 계정 메뉴. L09 전에는 Teams 계정도 대조합니다.</td><td>올바른 계정으로 로그인할 때까지 중단합니다.</td></tr>
+<tr><th scope="row">핵심 전체 · 이용 권한</th><td>관리자가 확인한 Copilot Studio 제작 이용 권한.</td><td>관리자에게 라이선스·이용 권한 할당을 확인합니다.</td><td>L01을 시작하지 않습니다.</td></tr>
+<tr><th scope="row">핵심 전체 · 환경</th><td>지정 Dataverse Sandbox 접근과 본인 실습 자산을 위한 해당 환경의 <code>Environment Maker</code> 역할.</td><td>Studio 환경 선택기, 관리자의 역할 할당 확인.</td><td>중단합니다. Default·Production으로 바꾸지 않습니다.</td></tr>
+<tr><th scope="row">L09 · Teams</th><td>게시 가능한 이용 권한, Teams 접근과 개인 에이전트 앱 설치 허용.</td><td>관리자의 게시 승인과 Teams 앱 정책.</td><td>평가판만 있으면 L01–L03까지만 진행하고 L09는 완료 처리하지 않습니다.</td></tr>
+</tbody></table></div>
+<p class="tiny"><b>일괄 필수가 아닌 권한:</b> 전역 관리자, System Administrator, Azure Owner. 입문 핵심에는 Azure 구독·GitHub 계정/PAT·SharePoint 커넥터가 필요하지 않습니다. 선택 실습의 조건은 별도입니다.</p>
+<p class="tiny"><a href="#auth-sites">포털·계정 확인</a> · <a href="#perms">상세 권한표</a> · <a href="#acr">이용 권한·크레딧 경계</a></p>
+<details class="deep" id="admin-preparation"><summary id="admin-preparation-summary" aria-expanded="false" aria-controls="admin-preparation-content">관리자·진행자 준비 · 참가자에게 부여할 역할이 아닙니다</summary><div class="d" id="admin-preparation-content">
+<ul>
+<li>승인된 Dataverse Sandbox를 제공하고 제작 이용 권한·참가자의 범위 제한 역할을 할당합니다. 업로드 파일 지식·검색의 전제 조건도 확인합니다.</li>
+<li>적용할 DLP 정책, 용량·크레딧 한도와 실습 중단 담당자를 확인합니다. 실습 때문에 조직 정책을 완화하지 않습니다.</li>
+<li>L09는 게시와 참가자의 개인 Teams 앱 설치를 승인합니다. 전사 공유를 필수로 요구하거나 참가자에게 관리자 계정을 주지 않습니다.</li>
+<li>별도로 선택한 Foundry/GHC 실습에만 승인된 자산·연결·실행 권한을 준비합니다. L05의 승인된 기존 모델 연결 재사용에는 신규 배포·키 조회 권한이 필요하지 않습니다. 새 인프라·연결 자격 증명·백엔드 역할은 별도 승인된 준비 작업입니다.</li>
+</ul></div></details>
+</div>
 <p id="lab-basics"><b>먼저 알아둘 용어:</b> 핵심 실습은 <b>Standard</b> 하네스(에이전트 런타임)를 사용합니다. <b>Topic</b>은 대화 흐름, <b>Knowledge</b>는 답변에 사용할 지식 원본입니다. GitHub Copilot(GHC) 하네스는 별도 선택 실습에서 다룹니다. 하네스는 생성 후 서로 변환할 수 없습니다. <a href="#terminology">전체 용어집</a></p>
 
 
@@ -2777,7 +2797,7 @@ DLP는 이와 별도의 커넥터·조합 정책이며, Entra Agent ID 생성만
   <div class="tw" tabindex="0" role="region" aria-labelledby="table-perms-29-caption"><table><caption class="sr-only" id="table-perms-29-caption">perms · ③ Azure · M365 쪽 권한</caption>
     <thead><tr><th scope="col">랩</th><th scope="col">필요한 권한</th></tr></thead>
     <tbody>
-      <tr><td><b>L05</b> Foundry Model</td><td>Foundry 프로젝트 접근 + <b>모델 배포·승인된 키 조회 권한</b>. 기존 배포 재사용에는 신규 리소스 생성 권한이 불필요하며, 생성 시 해당 작업·범위의 RBAC만 요청합니다.</td></tr>
+      <tr><td><b>L05</b> Foundry Model</td><td><b>기존 연결 사용:</b> 승인된 모델 배포 접근과 native APIM 연결 사용 권한. 재사용만을 위해 신규 배포·리소스 생성·키 조회 권한을 요구하지 않습니다. <b>신규 구성:</b> 권한을 가진 관리자·리소스 소유자가 필요한 프로비저닝·APIM API 범위 키·백엔드 역할 권한만 별도로 준비합니다. <a href="#admin-preparation">관리자 준비</a>를 참고하세요.</td></tr>
       <tr><td><b>L08</b> Foundry Agent</td><td>실습 프로젝트의 <b>Foundry User</b> 등 에이전트 설정 수정 권한 + Azure CLI/SDK 실행 환경. Activity 활성화는 L08의 REST 절차 참조</td></tr>
       <tr><td><b>L14</b> Foundry IQ</td><td>승인된 Connection 신원의 <b>KB 조회·검색 runtime 권한</b>과 인증 정보. 새 GHC에 지정한 KB/API Version/Connection의 저장·재열기와 새 session actual retrieval·반환 근거를 확인합니다. 선택기 표시·Azure 직접 검색·HTTP 200만으로 Studio runtime 준비 완료라고 판단하지 않습니다.</td></tr>
       <tr><td><b>L20</b> GHC 경비 workflow</td><td>전용 목록의 Create/Update 권한, 게시·활성화 가능한 workflow 권한, SharePoint·Approvals Connection과 고정 본인 승인자의 응답 권한이 필요합니다. agent 사용자와 각 연결의 실행 신원을 구분하고 DLP 호환성을 확인합니다. L04 Standard Agent flow나 L07 event trigger 권한 확인으로 대체하지 않습니다. 실제 timeout 시험은 선택이며 권한 확대를 위한 이유가 아닙니다.</td></tr>

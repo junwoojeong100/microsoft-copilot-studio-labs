@@ -15,6 +15,8 @@ Copilot Studio 에이전트를 만들고 지식·도구를 연결한 뒤, 같은
 | 입문자 | 업무 담당자·처음 사용하는 제작자: 가상 HR FAQ, 근거 기반 답변, 휴가 입력 검증, 본인 Teams 사용 | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html) |
 | Azure 개발자 | 개발자: REST API, Foundry 모델, MCP, Foundry IQ 검색, 승인 워크플로의 인증·실행 계약 확인 | [Open guide](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.html) | [가이드 열기](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html) |
 
+**시작 전 확인:** 참가자 최소 계정·권한 체크리스트 — [입문](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-hands-on-lab.ko.html#minimum-access) · [Azure 개발자](https://junwoojeong100.github.io/microsoft-copilot-studio-labs/copilot-studio-lab-for-azure-devs.ko.html#minimum-access). 확인 위치·미충족 시 중단 기준을 안내하며, 관리자 준비는 별도 접이식 영역으로 구분했습니다.
+
 입문 핵심 경로는 **L01 → L02 → L03 → L09**입니다. 개발자판은 **실습 0: 기본 에이전트 준비** 후 핵심 5개 **L04 → L05 → L12 → L14 → L20**을 진행합니다. 실습 0은 선행 준비 절차이며 핵심 완료 항목에 추가로 집계하지 않습니다. 개발자 영상에는 **선택/Preview L08 Foundry Agent**도 포함합니다.
 
 개발자 가이드는 입문 개념에 익숙하다고 가정하지만, 필요한 최소 에이전트 생성 절차는 자체적으로 제공합니다. 입문판 완료가 개발자판 완료를 뜻하지는 않습니다. 두 과정의 상세 비교는 각 가이드의 참고 부록에서 확인할 수 있습니다.
