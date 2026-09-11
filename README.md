@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README.ko.md)
 
-Build a Copilot Studio agent, configure its knowledge and tools, and confirm its behavior using the same assets. This repository contains two self-contained HTML guides and four recorded walkthroughs, separated into **Create** and **Use**.
+Build a Copilot Studio agent, configure its knowledge and tools, and confirm its behavior using the same assets. This repository contains two self-contained guides in English and Korean, plus eight recorded walkthroughs: **Create** and **Use** for each guide in both languages.
 
 **English is the default documentation language.** Korean editions are also included.
 
@@ -23,12 +23,16 @@ The developer guide assumes familiarity with the beginner concepts but includes 
 
 | Guide | Create | Use |
 |---|---|---|
-| Beginner | [4 min 33 sec](copilot-studio-hands-on-lab-create-20260909.mp4) | [3 min 21 sec](copilot-studio-hands-on-lab-use-20260909.mp4) |
-| Azure developer | [10 min 28 sec](copilot-studio-lab-for-azure-devs-create-20260909.mp4) | [9 min 21 sec](copilot-studio-lab-for-azure-devs-use-20260909.mp4) |
+| Beginner · English | [4 min 30 sec](copilot-studio-hands-on-lab-create-en-20260910.mp4) | [3 min 17 sec](copilot-studio-hands-on-lab-use-en-20260910.mp4) |
+| Azure developer · English | [10 min 34 sec](copilot-studio-lab-for-azure-devs-create-en-20260910.mp4) | [8 min 25 sec](copilot-studio-lab-for-azure-devs-use-en-20260910.mp4) |
 
-Both language editions link to the same **Korean-captioned videos with Korean lab prompts and responses**. The videos are edited walkthroughs using fictional data; they are not localized. When following the English edition, use its written English examples rather than copying Korean values from the videos.
+The English guides link to these **English-captioned recordings with actual English lab requests**. The [original four Korean recordings](README.ko.md#실습-녹화-영상) remain unchanged. The developer videos include GHC's Learn MCP, IQ retrieval, and expense-intake workflows, but not every optional GHC reference lab.
+
+**Recorded fallback:** Fresh Standard API-agent initialization did not complete, so the English developer walkthrough explicitly uses a prepared English Standard draft. New GHC agents, tools, lists, and workflow copies are used. Shared Foundry/IQ sources may retain Korean provenance markers or document titles; these are actual source data, not translated screenshots.
 
 The HTML guides include chapter timestamps. Video duration is not the time required to perform the labs; approval, provisioning, indexing, and publication delays are separate.
+
+All eight MP4s are below GitHub's normal Git limit of **100 MiB per file**; that limit is not a combined-size limit. Keep the original video quality and push with Git rather than relying on the browser upload's smaller limit. See [GitHub's file-size guidance](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github).
 
 ## Open the guides
 

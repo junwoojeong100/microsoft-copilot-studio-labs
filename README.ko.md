@@ -2,7 +2,7 @@
 
 [English](README.md) | [한국어](README.ko.md)
 
-Copilot Studio 에이전트를 만들고 지식·도구를 연결한 뒤, 같은 자산으로 실제 동작을 확인하는 실습 자료입니다. 독립적으로 열 수 있는 **HTML 가이드 2종**과 **Create(생성) / Use(사용) 녹화 영상 4편**을 제공합니다.
+Copilot Studio 에이전트를 만들고 지식·도구를 연결한 뒤, 같은 자산으로 실제 동작을 확인하는 실습 자료입니다. 독립적으로 열 수 있는 **국문·영문 HTML 가이드 2종**과 각 언어의 **Create(생성) / Use(사용) 녹화 영상 총 8편**을 제공합니다.
 
 **기본 문서 언어는 영어**이며 한국어 가이드도 함께 제공합니다.
 
@@ -26,9 +26,13 @@ Copilot Studio 에이전트를 만들고 지식·도구를 연결한 뒤, 같은
 | 입문자 | [4분 33초](copilot-studio-hands-on-lab-create-20260909.mp4) | [3분 21초](copilot-studio-hands-on-lab-use-20260909.mp4) |
 | Azure 개발자 | [10분 28초](copilot-studio-lab-for-azure-devs-create-20260909.mp4) | [9분 21초](copilot-studio-lab-for-azure-devs-use-20260909.mp4) |
 
-두 언어 가이드는 **한국어 자막·실습 프롬프트·응답을 사용하는 동일한 영상**으로 안내합니다. 영상은 가상 데이터를 사용하는 편집된 실습 예시이며 영어로 현지화하지 않았습니다. 영문판 실습에서는 영상의 한국어 값을 옮기지 말고 영문 가이드의 영어 예제를 사용하세요.
+이 표와 국문 가이드는 기존 **한국어 자막·실습 프롬프트·응답 영상 4편**을 그대로 사용합니다. [영문판에는 실제 영어 요청으로 실행한 별도의 영상 4편](README.md#recorded-walkthroughs)이 연결되어 있습니다. 개발자 영상은 GHC의 Learn MCP·IQ 조회·경비 접수 워크플로를 포함하지만, 모든 GHC 심화 참조 실습을 완료한 것은 아닙니다.
+
+영문 개발자 영상은 새 Standard API 에이전트 초기화가 완료되지 않아 **준비된 영문 Standard 초안을 사용한 대체 경로**를 명시합니다. GHC 에이전트·도구·목록·워크플로 복사본은 새 자산이며, 공유 Foundry/IQ 원문의 한글 표식이나 문서 제목은 실제 출처를 보존합니다.
 
 HTML 가이드에는 구간별 타임스탬프가 있습니다. 영상 길이와 실제 실습 소요시간은 다르며 승인·프로비저닝·인덱싱·게시 대기 시간은 별도입니다.
+
+8개 MP4는 모두 GitHub 일반 Git의 **파일당 100MiB 제한** 이내입니다. 합계 용량 제한이 아니므로 추가 화질 압축 없이 유지하며, 더 작은 제한이 있는 브라우저 업로드 대신 Git으로 푸시합니다. [GitHub 파일 크기 안내](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github)를 참고하세요.
 
 ## 가이드 열기
 
